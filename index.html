@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+      name="description"
+      content="Ftesë për bridal shower të Hanës me numërim mbrapsht, orar dhe lokacion."
+    />
+    <title>Hana's Bride to Be Party</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="hero" id="top">
+      <div class="petals" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="topbar" aria-label="Invitation navigation">
+        <a class="brand" href="#top" data-event="shortTitle">Bride to Be</a>
+        <div class="nav-links">
+          <a href="#countdown">Numërimi</a>
+          <a href="#schedule">Orari</a>
+          <a href="#location">Lokacioni</a>
+        </div>
+      </nav>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow" data-event="kicker">You are invited</p>
+        <h1>
+          <span data-event="title">Hana's Bride to Be Party</span>
+          <small data-event="couple">Bridal Shower</small>
+        </h1>
+        <p class="hero-copy" data-event="intro">
+          Ejani të festojmë Hanën me një pasdite të ëmbël, elegante dhe plot
+          kujtime të bukura.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#location">Hap lokacionin</a>
+          <a class="button secondary" href="#schedule">Shiko orarin</a>
+        </div>
+      </div>
+
+      <div class="hero-date reveal" aria-label="Event date">
+        <span data-event="weekday">E enjte</span>
+        <strong data-event="displayDate">11 qershor</strong>
+        <span data-event="displayTime">Nga ora 16:00</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro-section reveal" aria-labelledby="invite-heading">
+        <p class="section-kicker">Me shumë dashuri</p>
+        <h2 id="invite-heading">Një festë për Hanën</h2>
+        <p data-event="message">
+          Tema është baby pink. Vishuni bukur, sillni energjinë më të mirë dhe
+          bëhuni gati për një festë të paharrueshme.
+        </p>
+      </section>
+
+      <section class="countdown-section" id="countdown" aria-labelledby="countdown-heading">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Numërimi mbrapsht</p>
+          <h2 id="countdown-heading">Deri te festa</h2>
+        </div>
+        <div class="countdown-grid reveal" aria-live="polite">
+          <div class="count-box">
+            <span id="days">00</span>
+            <small>Ditë</small>
+          </div>
+          <div class="count-box">
+            <span id="hours">00</span>
+            <small>Orë</small>
+          </div>
+          <div class="count-box">
+            <span id="minutes">00</span>
+            <small>Minuta</small>
+          </div>
+          <div class="count-box">
+            <span id="seconds">00</span>
+            <small>Sekonda</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="schedule-section" id="schedule" aria-labelledby="schedule-heading">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Rrjedha e festës</p>
+          <h2 id="schedule-heading">Orari</h2>
+        </div>
+        <ol class="timeline reveal" id="timeline"></ol>
+      </section>
+
+      <section class="location-section" id="location" aria-labelledby="location-heading">
+        <div class="location-copy reveal">
+          <p class="section-kicker">Ku do të takohemi</p>
+          <h2 id="location-heading" data-event="venue">Lokacioni</h2>
+          <p data-event="address">Hapeni lokacionin në Google Maps</p>
+          <div class="location-actions">
+            <a class="button primary" id="mapLink" target="_blank" rel="noreferrer">
+              Hap në Google Maps
+            </a>
+            <a class="button secondary" id="calendarLink">Shto në kalendar</a>
+          </div>
+        </div>
+
+        <a class="map-card reveal" id="mapPreview" target="_blank" rel="noreferrer" aria-label="Open map">
+          <span class="pin" aria-hidden="true"></span>
+          <div>
+            <strong data-event="mapTitle">Lokacioni i festës</strong>
+            <small>Prek për navigim</small>
+          </div>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <p data-event="footer">Mezi presim të festojmë me ju.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
