@@ -64,9 +64,13 @@ a {
   padding: 24px clamp(18px, 5vw, 72px) 76px;
   background:
     linear-gradient(90deg, rgba(58, 35, 45, 0.72), rgba(89, 50, 65, 0.28), rgba(89, 50, 65, 0.02)),
-    url("assets/new_intro_image.png") center / cover;
+    url("assets/new_new.png") center / cover;
   color: var(--white);
   isolation: isolate;
+}
+
+.hero::before {
+  content: none;
 }
 
 .hero::after {
@@ -216,6 +220,7 @@ a {
 }
 
 .brand {
+  display: none;
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(1.35rem, 3vw, 2rem);
   font-weight: 700;
@@ -752,9 +757,21 @@ footer img {
     padding-top: 72vw;
     padding-bottom: 190px;
     background:
-      linear-gradient(180deg, rgba(255, 246, 249, 0) 0 56vw, rgba(247, 149, 184, 0.82) 76%, rgba(255, 246, 249, 0.98)),
-      url("assets/new_intro_image.png") top center / 100% auto no-repeat,
-      linear-gradient(180deg, #f6aac4 0 62vw, #fff6f9 100%);
+      linear-gradient(180deg, rgba(255, 246, 249, 0) 0 54vw, rgba(248, 157, 188, 0.42) 63vw, rgba(247, 177, 202, 0.82) 82%, rgba(248, 194, 211, 0.96)),
+      url("assets/new_new.png") top center / 100% auto no-repeat,
+      linear-gradient(180deg, #f4a5c1 0 62vw, #f8c4d7 100%);
+  }
+
+  .hero::before {
+    position: absolute;
+    inset: 50vw -20px 0;
+    z-index: 0;
+    display: block;
+    background: url("assets/new_new.png") center bottom / cover;
+    content: "";
+    filter: blur(24px);
+    opacity: 0.16;
+    transform: scale(1.05);
   }
 
   .hero-content {
@@ -766,17 +783,18 @@ footer img {
   }
 
   .hero-copy {
-    color: rgba(46, 39, 48, 0.78);
+    color: rgba(84, 44, 63, 0.82);
     font-size: 1rem;
     line-height: 1.6;
   }
 
   .hero .eyebrow {
-    color: #8e3f5d;
+    color: #9a3f62;
   }
 
   .hero h1 {
-    color: var(--ink);
+    color: #6f2e4a;
+    text-shadow: 0 8px 28px rgba(255, 255, 255, 0.28);
   }
 
   .topbar {
