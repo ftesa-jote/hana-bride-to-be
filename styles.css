@@ -374,20 +374,20 @@ section {
 
 .intro-section {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 390px);
-  gap: clamp(28px, 7vw, 90px);
+  grid-template-columns: minmax(520px, 1fr) minmax(420px, 560px);
+  gap: clamp(28px, 5vw, 68px);
   align-items: center;
-  max-width: 1180px;
+  max-width: 1320px;
 }
 
 .intro-copy {
-  max-width: 760px;
+  max-width: 880px;
 }
 
 .intro-gallery {
   display: grid;
-  grid-template-columns: 1fr 0.86fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.92fr 0.78fr;
+  grid-template-rows: repeat(3, minmax(94px, 1fr));
   gap: 12px;
   align-items: stretch;
 }
@@ -404,7 +404,7 @@ section {
 }
 
 .gallery-card.tall {
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
   transform: rotate(1.4deg);
 }
 
@@ -414,7 +414,12 @@ section {
 }
 
 .gallery-card.slim {
+  grid-column: 2 / span 2;
   transform: rotate(1deg);
+}
+
+.gallery-card.small {
+  min-height: 104px;
 }
 
 .gallery-card.tall::before {
@@ -445,7 +450,12 @@ section {
 }
 
 .gallery-card.slim img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
+  object-position: center;
+}
+
+.gallery-card.small img {
+  aspect-ratio: 1;
   object-position: center;
 }
 
@@ -453,6 +463,11 @@ section {
 .section-heading .section-kicker,
 .location-copy .section-kicker {
   color: var(--rose);
+}
+
+.intro-section h2 {
+  font-size: clamp(2.5rem, 5.3vw, 5rem);
+  white-space: nowrap;
 }
 
 .countdown-section {
@@ -515,8 +530,8 @@ section {
 
 .activities-section {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.48), rgba(255, 246, 249, 0.94)),
-    url("assets/villa_cartoon.png") right 8% bottom 18% / min(36vw, 420px) auto no-repeat;
+    linear-gradient(180deg, rgba(255, 246, 249, 0.82), rgba(255, 246, 249, 0.96)),
+    url("assets/activities-bg.png") center / cover;
 }
 
 .activities-grid {
@@ -690,6 +705,19 @@ footer img {
 }
 
 @media (max-width: 1040px) {
+  .intro-section {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-section h2 {
+    white-space: normal;
+  }
+
+  .intro-gallery {
+    max-width: 620px;
+    justify-self: center;
+  }
+
   .activities-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -732,7 +760,6 @@ footer img {
     min-height: 132px;
   }
 
-  .intro-section,
   .location-section {
     grid-template-columns: 1fr;
   }
@@ -740,17 +767,23 @@ footer img {
   .intro-gallery {
     max-width: 430px;
     justify-self: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
   }
 
   .gallery-card,
   .gallery-card.tall,
   .gallery-card.square,
   .gallery-card.slim {
+    grid-column: auto;
+    grid-row: auto;
     transform: none;
   }
 
   .activities-section {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 246, 249, 0.94));
+    background:
+      linear-gradient(180deg, rgba(255, 246, 249, 0.88), rgba(255, 246, 249, 0.98)),
+      url("assets/activities-bg.png") center / cover;
   }
 
   .activities-grid {

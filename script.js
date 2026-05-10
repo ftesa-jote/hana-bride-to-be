@@ -21,27 +21,27 @@ const eventDetails = {
     {
       title: "Ushqim",
       description: "Shije të lehta dhe të bukura për ta nisur festën ëmbël.",
-      image: "assets/bride-to-be-hero.png",
+      image: "assets/catering_cartoon.png",
     },
     {
       title: "Pije",
       description: "Pije freskuese dhe dolli për Hanën.",
-      image: "assets/champaign_glasses.png",
+      image: "assets/champaign_cartoon.png",
     },
     {
       title: "Foto",
       description: "Momente të bukura për t'i ruajtur përgjithmonë.",
-      image: "assets/group_girls.png",
+      image: "assets/girls_taking_pics_cartoon.png",
     },
     {
       title: "Muzikë",
       description: "Këngë dhe atmosferë për një pasdite plot energji.",
-      image: "assets/hana_with_dress.png",
+      image: "assets/group_girls.png",
     },
     {
       title: "Vallëzim",
       description: "Festojmë, kërcejmë dhe krijojmë kujtime bashkë.",
-      image: "assets/hana.png",
+      image: "assets/dancing_cartoon.png",
     },
   ],
 };
