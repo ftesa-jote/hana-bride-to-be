@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta
       name="description"
-      content="Ftesë për bridal shower të Hanës me numërim mbrapsht, orar dhe lokacion."
+      content="Ftesë për Hana's Bride to Be Party në Villa Marbella."
     />
     <title>Hana's Bride to Be Party</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +37,7 @@
         <a class="brand" href="#top" data-event="shortTitle">Bride to Be</a>
         <div class="nav-links">
           <a href="#countdown">Numërimi</a>
-          <a href="#schedule">Orari</a>
+          <a href="#activities">Aktivitete</a>
           <a href="#location">Lokacioni</a>
         </div>
       </nav>
@@ -49,12 +49,12 @@
           <small data-event="couple">Bridal Shower</small>
         </h1>
         <p class="hero-copy" data-event="intro">
-          Ejani të festojmë Hanën me një pasdite të ëmbël, elegante dhe plot
-          kujtime të bukura.
+          Jeni të ftuara në Hana's Bride to Be Party, një pasdite e ëmbël,
+          elegante dhe plot kujtime të bukura.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#location">Hap lokacionin</a>
-          <a class="button secondary" href="#schedule">Shiko orarin</a>
+          <a class="button secondary" href="#activities">Shiko aktivitetet</a>
         </div>
       </div>
 
@@ -67,12 +67,17 @@
 
     <main>
       <section class="intro-section reveal" aria-labelledby="invite-heading">
-        <p class="section-kicker">Me shumë dashuri</p>
-        <h2 id="invite-heading">Një festë për Hanën</h2>
-        <p data-event="message">
-          Tema është baby pink. Vishuni bukur, sillni energjinë më të mirë dhe
-          bëhuni gati për një festë të paharrueshme.
-        </p>
+        <div class="intro-copy">
+          <p class="section-kicker">Me shumë dashuri</p>
+          <h2 id="invite-heading">Një festë për Hanën</h2>
+          <p data-event="message">
+            Kodi i veshjes është baby pink. Vishuni bukur, sillni energjinë më
+            të mirë dhe bëhuni gati për një festë të paharrueshme.
+          </p>
+        </div>
+        <figure class="portrait-card">
+          <img src="assets/hana_portret.png" alt="Portret bridal shower i Hanës" />
+        </figure>
       </section>
 
       <section class="countdown-section" id="countdown" aria-labelledby="countdown-heading">
@@ -100,18 +105,18 @@
         </div>
       </section>
 
-      <section class="schedule-section" id="schedule" aria-labelledby="schedule-heading">
+      <section class="activities-section" id="activities" aria-labelledby="activities-heading">
         <div class="section-heading reveal">
-          <p class="section-kicker">Rrjedha e festës</p>
-          <h2 id="schedule-heading">Orari</h2>
+          <p class="section-kicker">Çfarë na pret</p>
+          <h2 id="activities-heading">Aktivitete</h2>
         </div>
-        <ol class="timeline reveal" id="timeline"></ol>
+        <div class="activities-grid reveal" id="activitiesList"></div>
       </section>
 
       <section class="location-section" id="location" aria-labelledby="location-heading">
         <div class="location-copy reveal">
           <p class="section-kicker">Ku do të takohemi</p>
-          <h2 id="location-heading" data-event="venue">Lokacioni</h2>
+          <h2 id="location-heading" data-event="venue">Villa Marbella</h2>
           <p data-event="address">Hapeni lokacionin në Google Maps</p>
           <div class="location-actions">
             <a class="button primary" id="mapLink" target="_blank" rel="noreferrer">
@@ -121,10 +126,11 @@
           </div>
         </div>
 
-        <a class="map-card reveal" id="mapPreview" target="_blank" rel="noreferrer" aria-label="Open map">
+        <a class="map-card reveal" id="mapPreview" target="_blank" rel="noreferrer" aria-label="Hap lokacionin">
+          <img src="assets/villa.jpg" alt="Villa Marbella" />
           <span class="pin" aria-hidden="true"></span>
           <div>
-            <strong data-event="mapTitle">Lokacioni i festës</strong>
+            <strong data-event="mapTitle">Villa Marbella</strong>
             <small>Prek për navigim</small>
           </div>
         </a>

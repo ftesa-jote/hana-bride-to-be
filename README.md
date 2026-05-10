@@ -11,7 +11,7 @@ Open `script.js` and update the `eventDetails` object at the top:
 - `venue`
 - `address`
 - `mapUrl`
-- `schedule`
+- `activities`
 - names and invitation text
 
 ## Host on GitHub Pages

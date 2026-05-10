@@ -63,8 +63,8 @@ a {
   align-items: center;
   padding: 24px clamp(18px, 5vw, 72px) 76px;
   background:
-    linear-gradient(90deg, rgba(58, 35, 45, 0.74), rgba(89, 50, 65, 0.34), rgba(89, 50, 65, 0.1)),
-    url("assets/bride-to-be-hero.png") center / cover;
+    linear-gradient(90deg, rgba(58, 35, 45, 0.72), rgba(89, 50, 65, 0.28), rgba(89, 50, 65, 0.02)),
+    url("assets/hana.png") center / cover;
   color: var(--white);
   isolation: isolate;
 }
@@ -371,7 +371,44 @@ section {
 }
 
 .intro-section {
-  max-width: 980px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 390px);
+  gap: clamp(28px, 7vw, 90px);
+  align-items: center;
+  max-width: 1180px;
+}
+
+.intro-copy {
+  max-width: 760px;
+}
+
+.portrait-card {
+  position: relative;
+  margin: 0;
+  border: 1px solid rgba(196, 97, 127, 0.18);
+  border-radius: 8px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow);
+  transform: rotate(1.4deg);
+}
+
+.portrait-card::before {
+  position: absolute;
+  inset: 24px -18px -18px 24px;
+  z-index: -1;
+  border-radius: 8px;
+  background: rgba(247, 201, 215, 0.42);
+  content: "";
+}
+
+.portrait-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .intro-section .section-kicker,
@@ -422,71 +459,56 @@ section {
   text-transform: uppercase;
 }
 
-.timeline {
-  position: relative;
+.activities-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 246, 249, 0.94)),
+    url("assets/hana_portret.png") right 10% center / min(42vw, 480px) auto no-repeat;
+}
+
+.activities-grid {
   display: grid;
-  gap: 20px;
-  max-width: 920px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
 }
 
-.timeline::before {
-  position: absolute;
-  top: 16px;
-  bottom: 16px;
-  left: 96px;
-  width: 1px;
-  background: rgba(180, 95, 107, 0.28);
-  content: "";
-}
-
-.timeline li {
-  position: relative;
+.activity-card {
+  min-height: 190px;
   display: grid;
-  grid-template-columns: 86px minmax(0, 1fr);
-  gap: 34px;
-  align-items: start;
-}
-
-.timeline time {
-  color: var(--rose);
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-.timeline article {
-  border: 1px solid rgba(180, 95, 107, 0.15);
+  align-content: end;
+  border: 1px solid rgba(196, 97, 127, 0.18);
   border-radius: 8px;
   padding: 22px;
-  background: rgba(255, 255, 255, 0.68);
-  box-shadow: 0 18px 60px rgba(88, 61, 66, 0.1);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 56px rgba(88, 61, 66, 0.1);
+  backdrop-filter: blur(14px);
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.timeline article::before {
-  position: absolute;
-  left: 91px;
-  width: 11px;
-  height: 11px;
-  margin-top: 10px;
-  border: 3px solid var(--paper);
-  border-radius: 50%;
+.activity-card::before {
+  width: 36px;
+  height: 3px;
+  margin-bottom: 34px;
+  border-radius: 999px;
   background: var(--rose);
   content: "";
-  box-shadow: 0 0 0 1px rgba(180, 95, 107, 0.3);
 }
 
-.timeline h3 {
-  margin: 0 0 8px;
-  font-size: 1.05rem;
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 70px rgba(88, 61, 66, 0.15);
 }
 
-.timeline p {
+.activity-card h3 {
+  margin: 0 0 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.activity-card p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 .location-section {
@@ -503,6 +525,7 @@ section {
 }
 
 .map-card {
+  position: relative;
   min-height: 360px;
   display: flex;
   align-items: end;
@@ -510,19 +533,29 @@ section {
   border-radius: 8px;
   padding: 24px;
   color: #fff;
-  background:
-    linear-gradient(145deg, rgba(46, 39, 48, 0.12), rgba(46, 39, 48, 0.72)),
-    linear-gradient(45deg, #d6c4b6 25%, transparent 25%),
-    linear-gradient(-45deg, #e8ded3 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #d6c4b6 75%),
-    linear-gradient(-45deg, transparent 75%, #e8ded3 75%);
-  background-position: 0 0, 0 0, 0 18px, 18px -18px, -18px 0;
-  background-size: auto, 36px 36px, 36px 36px, 36px 36px, 36px 36px;
+  background: #2e2730;
   box-shadow: var(--shadow);
   overflow: hidden;
 }
 
+.map-card::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(46, 39, 48, 0.04), rgba(46, 39, 48, 0.76));
+  content: "";
+}
+
+.map-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .pin {
+  position: relative;
+  z-index: 1;
   width: 46px;
   height: 46px;
   flex: 0 0 auto;
@@ -535,6 +568,8 @@ section {
 
 .map-card strong,
 .map-card small {
+  position: relative;
+  z-index: 1;
   display: block;
 }
 
@@ -583,12 +618,18 @@ footer {
   }
 }
 
+@media (max-width: 1040px) {
+  .activities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 760px) {
   .hero {
     min-height: 96vh;
     align-items: end;
     padding-bottom: 190px;
-    background-position: 58% center;
+    background-position: 61% center;
   }
 
   .topbar {
@@ -617,25 +658,27 @@ footer {
     min-height: 132px;
   }
 
-  .timeline::before {
-    left: 70px;
-  }
-
-  .timeline li {
-    grid-template-columns: 62px minmax(0, 1fr);
-    gap: 24px;
-  }
-
-  .timeline article::before {
-    left: 65px;
-  }
-
-  .timeline time {
-    font-size: 1.35rem;
-  }
-
+  .intro-section,
   .location-section {
     grid-template-columns: 1fr;
+  }
+
+  .portrait-card {
+    max-width: 340px;
+    justify-self: center;
+    transform: none;
+  }
+
+  .activities-section {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 246, 249, 0.94));
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-card {
+    min-height: 146px;
   }
 
   .map-card {
