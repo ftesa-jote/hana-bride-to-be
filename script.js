@@ -19,14 +19,14 @@ const eventDetails = {
   mapUrl: "https://maps.app.goo.gl/fDBL8BHfCVdxiJM79",
   activities: [
     {
+      title: "Muzikë",
+      description: "Muzikë dhe atmosferë për një mbrëmje plot energji dhe hare.",
+      image: "assets/group_girls.png",
+    },
+    {
       title: "Ushqim",
       description: "Catering me shije të lehta dhe të bukura për ta nisur festën mbarë.",
       image: "assets/catering_cartoon.png",
-    },
-    {
-      title: "Pije",
-      description: "Pije të freskëta dhe dolli për Hanën.",
-      image: "assets/champaign_cartoon.png",
     },
     {
       title: "Foto",
@@ -34,9 +34,9 @@ const eventDetails = {
       image: "assets/girls_taking_pics_cartoon.png",
     },
     {
-      title: "Muzikë",
-      description: "Muzikë dhe atmosferë për një mbrëmje plot energji dhe hare.",
-      image: "assets/group_girls.png",
+      title: "Pije",
+      description: "Pije të freskëta dhe dolli për Hanën.",
+      image: "assets/champaign_cartoon.png",
     },
     {
       title: "Vallëzim",

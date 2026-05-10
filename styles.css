@@ -84,15 +84,15 @@ a {
 }
 
 .petals {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: 2;
   overflow: hidden;
   pointer-events: none;
 }
 
 .petals span {
-  position: absolute;
+  position: fixed;
   top: -12vh;
   left: var(--x);
   width: var(--size);
@@ -100,7 +100,7 @@ a {
   border-radius: 80% 0 80% 0;
   background: rgba(255, 220, 224, 0.82);
   box-shadow: 0 0 18px rgba(255, 255, 255, 0.28);
-  opacity: 0.78;
+  opacity: 0.62;
   transform: rotate(var(--rotate));
   animation: petal-fall var(--duration) linear infinite;
   animation-delay: var(--delay);
@@ -550,9 +550,9 @@ section {
 }
 
 .activity-card {
-  min-height: 270px;
+  min-height: 292px;
   display: grid;
-  grid-template-rows: 112px auto auto;
+  grid-template-rows: 142px auto auto;
   align-content: start;
   gap: 12px;
   border: 1px solid rgba(196, 97, 127, 0.18);
@@ -566,11 +566,11 @@ section {
 
 .activity-card img {
   width: 100%;
-  height: 112px;
+  height: 142px;
   border-radius: 6px;
   object-fit: cover;
   object-position: center;
-  filter: saturate(0.92);
+  filter: saturate(1.06) contrast(1.02);
 }
 
 .activity-card:nth-child(2) img,
