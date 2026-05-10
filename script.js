@@ -1,13 +1,13 @@
 const eventDetails = {
   shortTitle: "Hana",
-  kicker: "Jeni të ftuara",
+  kicker: "Jeni të ftuara në",
   title: "Hana's Bride to Be Party",
-  couple: "Bridal Shower",
+  couple: "",
   intro:
-    "Jeni të ftuara në Hana's Bride to Be Party, një pasdite e ëmbël, elegante dhe plot kujtime të bukura.",
+    "Një pasdite e ëmbël, verore dhe plot kujtime të bukura.",
   message:
-    "Kodi i veshjes është baby pink. Vishuni bukur, sillni energjinë më të mirë dhe bëhuni gati për një festë të paharrueshme.",
-  footer: "Mezi presim të festojmë me ju.",
+    "Kodi i veshjes është diçka baby pink verore. Sillni energjinë më të mirë, buzëqeshjet e bukura dhe bëhuni gati për një festë të paharrueshme.",
+  footer: "Mezi presim të festojmë me ju!!!!!!",
   partyDate: "2026-06-11T16:00:00+02:00",
   weddingDate: "2026-06-11T16:00:00+02:00",
   weekday: "E enjte",
@@ -20,22 +20,22 @@ const eventDetails = {
   activities: [
     {
       title: "Ushqim",
-      description: "Shije të lehta dhe të bukura për ta nisur festën ëmbël.",
+      description: "Catering me shije të lehta dhe të bukura për ta nisur festën mbarë.",
       image: "assets/catering_cartoon.png",
     },
     {
       title: "Pije",
-      description: "Pije freskuese dhe dolli për Hanën.",
+      description: "Pije të freskëta dhe dolli për Hanën.",
       image: "assets/champaign_cartoon.png",
     },
     {
       title: "Foto",
-      description: "Momente të bukura për t'i ruajtur përgjithmonë.",
+      description: "Shumë foto dhe momente të bukura për t'i ruajtur përgjithmonë.",
       image: "assets/girls_taking_pics_cartoon.png",
     },
     {
       title: "Muzikë",
-      description: "Këngë dhe atmosferë për një pasdite plot energji.",
+      description: "Muzikë dhe atmosferë për një mbrëmje plot energji dhe hare.",
       image: "assets/group_girls.png",
     },
     {
@@ -50,7 +50,7 @@ const textTargets = document.querySelectorAll("[data-event]");
 
 textTargets.forEach((target) => {
   const key = target.dataset.event;
-  if (eventDetails[key]) {
+  if (Object.prototype.hasOwnProperty.call(eventDetails, key)) {
     target.textContent = eventDetails[key];
   }
 });
