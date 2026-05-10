@@ -64,7 +64,7 @@ a {
   padding: 24px clamp(18px, 5vw, 72px) 76px;
   background:
     linear-gradient(90deg, rgba(58, 35, 45, 0.72), rgba(89, 50, 65, 0.28), rgba(89, 50, 65, 0.02)),
-    url("assets/hana.png") center / cover;
+    url("assets/hana_for_starter_page.png") center / cover;
   color: var(--white);
   isolation: isolate;
 }
