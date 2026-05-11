@@ -334,10 +334,10 @@ h2 {
 }
 
 .button.primary {
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.58);
   color: var(--rose);
-  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(16px);
 }
 
 .button.secondary {
